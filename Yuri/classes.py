@@ -1,5 +1,3 @@
-import os
-
 class Hotel:
     def __init__(self, nome):
         self.nome = nome
@@ -17,16 +15,18 @@ class Hotel:
         for reserva in self.reservas:
             print(reserva)
     
-    def add_reserva(self, reserva):
-        self.reservas.append(reserva)
-    
-    
 class Quartos:
     def __init__(self, numero, tipo, preco):
         self.numero = numero
         self.tipo = tipo
         self.preco = preco
         self.reservas = []
+
+    def __str__(self):
+        return f'Número: {self.numero}\nTipo: {self.tipo}\nPreço: {self.preco}'
+
+    def add_reserva(self, reserva):
+        self.reservas.append(reserva)    
 
 class Reserva:
     def __init__(self, nome, cpf, data_entrada, data_saida):
@@ -36,42 +36,28 @@ class Reserva:
         self.data_saida = data_saida
 
     def __str__(self):
-        return input(f'Nome: {self.nome}\nCPF: {self.cpf}\nData de entrada: {self.data_entrada}\nData de saída: {self.data_saida}')    
+        return f'Nome: {self.nome}\nCPF: {self.cpf}\nData de entrada: {self.data_entrada}\nData de saída: {self.data_saida}'
 
 class AP_Luxo(Quartos):
-    def __init__(self, numero, tipo, preco):
-        super().__init__(numero, tipo, preco)
-        self.tipo = 'Apartamento de Luxo'
-        self.preco = 500
+    def __init__(self, numero):
+        super().__init__(numero, 'Apartamento de Luxo', 500)
 
-class AP_MAster(Quartos):
-    def __init__(self, numero, tipo, preco):
-        super().__init__(numero, tipo, preco)
-        self.tipo = 'Apartamento Master'
-        self.preco = 300
+class AP_Master(Quartos):
+    def __init__(self, numero):
+        super().__init__(numero, 'Apartamento Master', 300)
 
 class AP_Simples(Quartos):
-    def __init__(self, numero, tipo, preco):
-        super().__init__(numero, tipo, preco)
-        self.tipo = 'Apartamento Simples'
-        self.preco = 150
+    def __init__(self, numero):
+        super().__init__(numero, 'Apartamento Simples', 150)
 
 class AP_SimplesCasal(Quartos):
-    def __init__(self, numero, tipo, preco):
-        super().__init__(numero, tipo, preco)
-        self.tipo = 'Apartamento Simples Casal'
-        self.preco = 200
+    def __init__(self, numero):
+        super().__init__(numero, 'Apartamento Simples Casal', 200)
 
 class AP_Duplo(Quartos):
-    def __init__(self, numero, tipo, preco):
-        super().__init__(numero, tipo, preco)
-        self.tipo = 'Apartamento Duplo'
-        self.preco = 250
+    def __init__(self, numero):
+        super().__init__(numero, 'Apartamento Duplo', 250)
 
 class AP_DuploCasal(Quartos):
-    def __init__(self, numero, tipo, preco):
-        super().__init__(numero, tipo, preco)
-        self.tipo = 'Apartamento Duplo Casal'
-        self.preco = 300
-
-
+    def __init__(self, numero):
+        super().__init__(numero, 'Apartamento Duplo Casal', 300)
