@@ -25,6 +25,8 @@ while True:
                     cliente.append(clientes)
 
             case 2:
+                os.system("cls")
+
                 
 
             case 3:
