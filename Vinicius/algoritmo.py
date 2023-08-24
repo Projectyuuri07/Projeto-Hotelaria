@@ -42,10 +42,7 @@ while True:
                         print("Login falhou, senha incorreta.")
                 
             case 3:
-                os.system("cls")
-                print("Saindo do sistema...")
-                espera()
-                break
+                print("Bem-vindo a sessão de quartos!\n\n As categorias disponíveis são: \n [1] Simples \n[2] Casal \n[3] Duplo \n[4] Duplo Casal \n[5] Luxo \n[6] Master \n\n Sua escolha: ")
 
     except ValueError:
         print("Opção inválida. Digite um número válido.")
