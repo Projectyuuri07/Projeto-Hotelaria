@@ -36,7 +36,7 @@ def main():
                 numero_quarto = input("Digite o número do quarto que deseja reservar: ")
                 for quarto in hotel.quartos:
                     if quarto.numero == numero_quarto:
-                        quarto.add_reserva(reserva)
+                        quarto.add_reserva(reserva, hotel)
                         hotel.reservas.append(reserva)
                         print("Reserva feita com sucesso!")
                         parar()
