@@ -27,6 +27,7 @@ while True:
 
             case 2:
                 print("Quartos disponiveis")
+                
 
             case 3:
                 print("\nSaindo do sistema...")
