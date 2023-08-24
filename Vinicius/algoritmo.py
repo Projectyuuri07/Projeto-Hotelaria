@@ -23,16 +23,16 @@ while True:
                 clientes.append(cliente)
                 os.system("pause")
                 os.system("cls")
+               
 
             case 2:
                 os.system("cls")
                 for i in clientes:
-                    print(cliente)
-                    os.system("pause")
+                    print(i.get_nome())
                 nome_login = input("Qual o seu nome: ")
-                if nome_login in clientes:
+                if nome_login == cliente.get_nome():
                     senha_login = int(input("Digite sua senha: "))
-                    if senha_login == cliente.senha():
+                    if senha_login == cliente.get_senha():
                         print("Login realizado com sucesso! Encaminhando para a sessão de quartos")
                         os.system("pause")
                         os.system("cls")
