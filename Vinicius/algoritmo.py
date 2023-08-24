@@ -12,7 +12,7 @@ while True:
     x = 1
     try:
         print("------------------------------------------Bem vindo ao Hotel GP2------------------------------------------")
-        escolha = int(input("[1] Cadastro\n[2] Login\n[3] Sair\nQuartos\nSua escolha: "))
+        escolha = int(input("[1] Cadastro\n[2] Login\n[3] Sair\n[4] Quartos\nSua escolha: "))
         match escolha:
             case 1:
                 os.system("cls")
@@ -20,13 +20,15 @@ while True:
                 print("Cadastrado com sucesso!")
                 print (f"{cliente.get_nome()}")
                 print (f"{cliente.get_senha()}")
-                for cliente in clientes:
-                    cliente.append(clientes)
+                clientes.append(cliente)
+                os.system("pause")
+                os.system("cls")
 
             case 2:
                 os.system("cls")
-                for cliente in clientes:
+                for i in clientes:
                     print(cliente)
+                    os.system("pause")
                 nome_login = input("Qual o seu nome: ")
                 if nome_login in clientes:
                     senha_login = int(input("Digite sua senha: "))
@@ -44,5 +46,8 @@ while True:
                 print("Saindo do sistema...")
                 espera()
                 break
+
     except ValueError:
         print("Opção inválida. Digite um número válido.")
+        os.system("pause")
+        os.system("cls")
