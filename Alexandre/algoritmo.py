@@ -6,8 +6,9 @@ def espera():
     time.sleep(2)
 
 clientes = []
-quartos = []
+quartos_disponiveis = []
 
+hotel = Hotel(len(quartos_disponiveis), quartos_disponiveis, 0)
 while True:
     x = 1
     try:
@@ -26,10 +27,12 @@ while True:
                         break
 
             case 2:
-                print("Quartos disponiveis")
                 
 
             case 3:
-                print("\nSaindo do sistema...")
+                os.system("cls")
+                print("Saindo do sistema...")
                 espera()
                 break
+    except ValueError:
+        print("Opção inválida. Digite um número válido.")
