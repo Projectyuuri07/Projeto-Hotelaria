@@ -88,4 +88,62 @@ class AP_Master(Quartos):
     def get_preco(self):
         return self.preco
 
+class AP_Simples(Quartos):
+    def __init__(self, numero, preco):
+        self.numero = numero
+        self.preco = preco
+        self.tipo = "AP_Simples"
 
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
+
+class AP_SimplesCasal(Quartos):
+    def __init__(self, numero, preco):
+        self.numero = numero
+        self.preco = preco
+        self.tipo = "AP_SimplesCasal"
+
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
+
+class AP_Duplo(Quartos):
+    def __init__(self, numero, preco):
+        self.numero = numero
+        self.preco = preco
+        self.tipo = "AP_Duplo"
+
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
+
+class AP_DuploCasal(Quartos):
+    def __init__(self, numero, preco):
+        self.numero = numero
+        self.preco = preco
+        self.tipo = "AP_DuploCasal"
+
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
