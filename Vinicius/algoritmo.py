@@ -1,4 +1,4 @@
-from classes import *
+from classess import *
 import os
 import time
 
@@ -16,8 +16,7 @@ while True:
         match escolha:
             case 1:
                 os.system("cls")
-                cliente = Hotel()
-                cliente.cadastro(nome=input("Digite seu nome: "), senha = input("Digite sua senha: "))
+                cliente = Cliente(nome=input("Digite seu nome"), senha =("Digite sua seha: "))
                 print("Cadastrado com sucesso!")
                 print (f[cliente.get_nome()])
                 print (f[cliente.get_senha()])
