@@ -9,7 +9,6 @@ ibis = Hotel(12,6,6)
 clientes = []
 
 while True:
-    x = 1
     try:
         print("------------------------------------------Bem vindo ao Hotel GP2------------------------------------------")
         escolha = int(input("[1] Cadastro\n[2] Login\n[3] Sair\nSua escolha: "))
@@ -52,6 +51,15 @@ while True:
                                 
                     else:
                         print("Login falhou, senha incorreta.")
+
+                    
+            case 3:
+                os.system("cls")
+                print("Obrigado pela preferencia!")
+                espera()
+                print("Saindo...")
+                espera()
+                break
 
     except ValueError:
         print("Opção inválida. Digite um número válido.")
