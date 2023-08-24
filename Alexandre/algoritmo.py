@@ -9,7 +9,6 @@ ibis = Hotel(12,6,6)
 clientes = []
 
 while True:
-    x = 1
     try:
         print("------------------------------------------Bem vindo ao Hotel GP2------------------------------------------")
         escolha = int(input("[1] Cadastro\n[2] Login\n[3] Sair\nSua escolha: "))
@@ -37,21 +36,33 @@ while True:
                         os.system("pause")
                         os.system("cls")
 
-                        seleção = int(input("Bem-vindo a sessão de quartos!\n\n As categorias disponíveis são: \n [1] Simples \n[2] Casal \n[3] Duplo \n[4] Duplo Casal \n[5] Luxo \n[6] Master \n\n Sua escolha: "))
+                        seleção = int(input("Bem-vindo a sessão de quartos!\n\n As categorias disponíveis são: \n[1] Simples \n[2] Casal \n[3] Duplo \n[4] Duplo Casal \n[5] Luxo \n[6] Master \n\n Sua escolha: "))
                         match seleção:
                             case 1:
+                                os.system("cls")
                                 simples = {1 : "Disponivel", 2 : "Disponível"}
                                 print(f"Esses são os quartos para a categoria simples: {simples}")
                                 reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
                                 if reserva == 1:
                                     simples[1, "Disponível"] = 1, "Indisponível"
                                     print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Simples":"Quarto 1"]
                                 elif reserva == 2:
                                     simples [2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Simples":"Quarto 2"]
                                 
                     else:
                         print("Login falhou, senha incorreta.")
+
+                    
+            case 3:
+                os.system("cls")
+                print("Obrigado pela preferencia!")
+                espera()
+                print("Saindo...")
+                espera()
+                break
 
     except ValueError:
         print("Opção inválida. Digite um número válido.")
