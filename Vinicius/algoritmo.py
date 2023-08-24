@@ -30,9 +30,6 @@ while True:
                 if nome_login in clientes:
                     senha_login = int(input("Digite sua senha: "))
                 
-
-                
-
             case 3:
                 os.system("cls")
                 print("Saindo do sistema...")
