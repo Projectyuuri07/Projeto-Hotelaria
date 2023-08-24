@@ -24,6 +24,7 @@ class Quartos:
 
     def add_reserva(self, reserva):
         self.reservas.append(reserva)    
+        hotel.reservas.append(reserva)
 
 class Reserva:
     def __init__(self, nome, cpf, data_entrada, data_saida):
