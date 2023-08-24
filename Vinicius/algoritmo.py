@@ -16,15 +16,20 @@ while True:
         match escolha:
             case 1:
                 os.system("cls")
-                cliente = Cliente(nome=input("Digite seu nome"), senha =("Digite sua seha: "))
+                cliente = Cliente(nome=input("Digite seu nome: "), senha=int(input("Digite sua seha: ")))
                 print("Cadastrado com sucesso!")
-                print (f[cliente.get_nome()])
-                print (f[cliente.get_senha()])
+                print (f"{cliente.get_nome()}")
+                print (f"{cliente.get_senha()}")
                 for cliente in clientes:
                     cliente.append(clientes)
 
             case 2:
-                os.system("cls")
+                nome_login = input("Qual o seu nome: ")
+                for cliente in clientes:
+                    print(f"{clientes}")
+                if nome_login in clientes:
+                    senha_login = int(input("Digite sua senha: "))
+                
 
                 
 
