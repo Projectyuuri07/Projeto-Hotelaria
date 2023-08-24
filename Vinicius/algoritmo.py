@@ -12,7 +12,7 @@ while True:
     x = 1
     try:
         print("------------------------------------------Bem vindo ao Hotel GP2------------------------------------------")
-        escolha = int(input("[1] Cadastro\n[2] Login\n[3] Sair\n[4] Quartos\nSua escolha: "))
+        escolha = int(input("[1] Cadastro\n[2] Login\n[3] Sair\nSua escolha: "))
         match escolha:
             case 1:
                 os.system("cls")
@@ -36,13 +36,22 @@ while True:
                         print("Login realizado com sucesso! Encaminhando para a sessão de quartos")
                         os.system("pause")
                         os.system("cls")
-                        escolha = 3
-                    
+
+                        seleção = int(input("Bem-vindo a sessão de quartos!\n\n As categorias disponíveis são: \n [1] Simples \n[2] Casal \n[3] Duplo \n[4] Duplo Casal \n[5] Luxo \n[6] Master \n\n Sua escolha: "))
+                        match seleção:
+                            case 1:
+                                simples = {1 : "Disponivel", 2 : "Disponível"}
+                                print(f"Esses são os quartos para a categoria simples: {simples}")
+                                reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
+                                if reserva == 1:
+                                    simples[1, "Disponível"] = 1, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                elif reserva == 2:
+                                    simples [2, "Disponível"] = 2, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                
                     else:
                         print("Login falhou, senha incorreta.")
-                
-            case 3:
-                print("Bem-vindo a sessão de quartos!\n\n As categorias disponíveis são: \n [1] Simples \n[2] Casal \n[3] Duplo \n[4] Duplo Casal \n[5] Luxo \n[6] Master \n\n Sua escolha: ")
 
     except ValueError:
         print("Opção inválida. Digite um número válido.")
