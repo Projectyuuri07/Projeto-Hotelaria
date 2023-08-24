@@ -34,4 +34,58 @@ class Hotel:
     def get_quarto(self):
         return self.quartos
 
+class Quartos(Hotel):
+    def __init__(self, tipo, numero, preco):
+        self.tipo = tipo
+        self.numero = numero
+        self.preco = preco
+
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
+
+    def set_tipo(self, tipo):
+        self.tipo = tipo
+
+    def set_numero(self, numero):
+        self.numero = numero
+ 
+    def set_preco(self, preco):
+        self.preco = preco
+
+class AP_Luxo(Quartos):
+    def __init__(self, numero, preco):
+        self.numero = numero
+        self.preco = preco
+        self.tipo = "AP_Luxo"
+
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
+
+class AP_Master(Quartos):
+    def __init__(self, numero, preco):
+        self.numero = numero
+        self.preco = preco
+        self.tipo = "AP_Master"
+
+    def get_tipo(self):
+        return self.tipo
+
+    def get_numero(self):
+        return self.numero
+
+    def get_preco(self):
+        return self.preco
+
 
