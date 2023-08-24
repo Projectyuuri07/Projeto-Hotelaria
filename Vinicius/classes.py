@@ -4,7 +4,19 @@ class Hotel:
         self.quartos_disponiveis = quartos_disponiveis
         self.quartos_indisponiveis = quartos_indisponiveis
 
-    def cadastro(self, nome, senha):
+    def reserva(self):
+        quartos = {}
+        if self.quartos_disponiveis > 0:
+            quarto_reservado = int(input("Digite o quarto desejado: "))
+            for i in range (self.quartos_disponiveis):
+                quartos.append(quarto_reservado)
+                self.quartos_disponiveis -1
+                self.quartos_indisponiveis +1
+        else:
+            print("Nenhum quarto disponível!")
+
+class Cliente:
+    def __init__(self, nome, senha):
         self.nome = nome
         self.senha = senha
 
@@ -19,18 +31,6 @@ class Hotel:
     
     def set_nome(self, nova_senha):
         self.nome = nova_senha
-
-
-    def reserva(self):
-        quartos = {}
-        if self.quartos_disponiveis > 0:
-            quarto_reservado = int(input("Digite o quarto desejado: "))
-            for i in range (self.quartos_disponiveis):
-                quartos.append(quarto_reservado)
-                self.quartos_disponiveis -1
-                self.quartos_indisponiveis +1
-        else:
-            print("Nenhum quarto disponível!")
 
 class Quartos(Hotel):
     def características(self, camas, preço, espaço):

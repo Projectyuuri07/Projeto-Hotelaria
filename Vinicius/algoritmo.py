@@ -5,7 +5,7 @@ import time
 def espera():
     time.sleep(2)
 
-hotel = Hotel(12,6,6)
+ibis = Hotel(12,6,6)
 clientes = []
 
 while True:
