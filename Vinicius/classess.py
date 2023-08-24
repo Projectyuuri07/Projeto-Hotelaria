@@ -41,6 +41,7 @@ class Cliente:
     def reserva_cliente(self, reserva_cliente):
         self.reserva_cliente = reserva_cliente
         reserva_cliente = []
+        
 
 class Quartos(Hotel):
     def características(self, camas, preço, espaço):

@@ -51,6 +51,75 @@ while True:
                                     simples [2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
                                     cliente.reserva_cliente["Simples":"Quarto 2"]
+                            
+                            case 2:
+                                casal = {1 : "Disponivel", 2 : "Disponível"}
+                                print(f"Esses são os quartos para a categoria simples: {casal}")
+                                reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
+                                if reserva == 1:
+                                    casal[1, "Disponível"] = 1, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Casal":"Quarto 1"]
+                                elif reserva == 2:
+                                    simples [2, "Disponível"] = 2, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Casal":"Quarto 2"]
+                            
+                            case 3:
+                                duplo = {1 : "Disponivel", 2 : "Disponível"}
+                                print(f"Esses são os quartos para a categoria simples: {duplo}")
+                                reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
+                                if reserva == 1:
+                                    duplo[1, "Disponível"] = 1, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Duplo":"Quarto 1"]
+                                elif reserva == 2:
+                                    duplo [2, "Disponível"] = 2, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Duplo":"Quarto 2"]
+
+                            case 4:
+                                duplo_casal = {1 : "Disponivel", 2 : "Disponível"}
+                                print(f"Esses são os quartos para a categoria simples: {duplo_casal}")
+                                reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
+                                if reserva == 1:
+                                    duplo_casal[1, "Disponível"] = 1, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Duplo Casal":"Quarto 1"]
+                                elif reserva == 2:
+                                    duplo_casal[2, "Disponível"] = 2, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Duplo Casal":"Quarto 2"]
+                            
+                            case 5:
+                                luxo = {1 : "Disponivel", 2 : "Disponível"}
+                                print(f"Esses são os quartos para a categoria simples: {luxo}")
+                                reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
+                                if reserva == 1:
+                                    luxo[1, "Disponível"] = 1, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Luxo":"Quarto 1"]
+                                elif reserva == 2:
+                                    luxo[2, "Disponível"] = 2, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Luxo":"Quarto 2"]
+                            
+                            case 6:
+                                master = {1 : "Disponivel", 2 : "Disponível"}
+                                print(f"Esses são os quartos para a categoria simples: {master}")
+                                reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
+                                if reserva == 1:
+                                    master[1, "Disponível"] = 1, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Master":"Quarto 1"]
+                                elif reserva == 2:
+                                    simples [2, "Disponível"] = 2, "Indisponível"
+                                    print("Reserva realizada com sucesso!")
+                                    cliente.reserva_cliente["Master":"Quarto 2"]
+
+                            case 7:
+                                
+
                                 
                     else:
                         print("Login falhou, senha incorreta.")
