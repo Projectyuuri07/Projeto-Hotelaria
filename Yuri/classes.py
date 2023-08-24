@@ -38,4 +38,40 @@ class Reserva:
     def __str__(self):
         return input(f'Nome: {self.nome}\nCPF: {self.cpf}\nData de entrada: {self.data_entrada}\nData de saída: {self.data_saida}')    
 
+class AP_Luxo(Quartos):
+    def __init__(self, numero, tipo, preco):
+        super().__init__(numero, tipo, preco)
+        self.tipo = 'Apartamento de Luxo'
+        self.preco = 500
+
+class AP_MAster(Quartos):
+    def __init__(self, numero, tipo, preco):
+        super().__init__(numero, tipo, preco)
+        self.tipo = 'Apartamento Master'
+        self.preco = 300
+
+class AP_Simples(Quartos):
+    def __init__(self, numero, tipo, preco):
+        super().__init__(numero, tipo, preco)
+        self.tipo = 'Apartamento Simples'
+        self.preco = 150
+
+class AP_SimplesCasal(Quartos):
+    def __init__(self, numero, tipo, preco):
+        super().__init__(numero, tipo, preco)
+        self.tipo = 'Apartamento Simples Casal'
+        self.preco = 200
+
+class AP_Duplo(Quartos):
+    def __init__(self, numero, tipo, preco):
+        super().__init__(numero, tipo, preco)
+        self.tipo = 'Apartamento Duplo'
+        self.preco = 250
+
+class AP_DuploCasal(Quartos):
+    def __init__(self, numero, tipo, preco):
+        super().__init__(numero, tipo, preco)
+        self.tipo = 'Apartamento Duplo Casal'
+        self.preco = 300
+
 
