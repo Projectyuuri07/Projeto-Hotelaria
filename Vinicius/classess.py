@@ -16,10 +16,9 @@ class Hotel:
             print("Nenhum quarto disponível!")
 
 class Cliente:
-    def __init__(self, nome, senha, reservas_cliente):
+    def __init__(self, nome, senha):
         self.nome = nome
         self.senha = senha
-        self.reservas = reservas_cliente
 
     def get_nome(self):
         return self.nome
@@ -32,6 +31,16 @@ class Cliente:
     
     def set_nome(self, nova_senha):
         self.nome = nova_senha
+
+    def get_reserva(self):
+        return self.reserva_cliente
+    
+    def set_reserva(self, nova_reserva):
+        self.reserva_cliente = nova_reserva
+
+    def reserva_cliente(self, reserva_cliente):
+        self.reserva_cliente = reserva_cliente
+        reserva_cliente = []
 
 class Quartos(Hotel):
     def características(self, camas, preço, espaço):
