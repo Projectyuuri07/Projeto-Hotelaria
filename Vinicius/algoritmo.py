@@ -7,6 +7,7 @@ def espera():
 
 ibis = Hotel(12,6,6)
 clientes = []
+reservas_cliente = []
 
 while True:
     x = 1
@@ -43,17 +44,16 @@ while True:
                         match seleção:
                             case 1:
                                 print("O quarto simples possui uma cama. com espaço para no máximo 1 pessoa.\n")
-                                simples = {1 : "Disponivel", 2 : "Disponível"}
+                                simples = {"1":"Disponivel", "2":"Disponível"}
                                 print(f"Esses são os quartos para a categoria simples: {simples}")
                                 reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
                                 if reserva == 1:
                                     simples[1, "Disponível"] = 1, "Indisponível"
-                                    print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Simples":"Quarto 1"]
+                                    cliente.reservas_cliente(tipo="Simples", número="Quarto 1")
                                 elif reserva == 2:
                                     simples [2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Simples":"Quarto 2"]
+                                    cliente.reservas_cliente(tipo="Simples", número="Quarto 2")
                             
                             case 2:
                                 casal = {1 : "Disponivel", 2 : "Disponível"}
@@ -62,11 +62,11 @@ while True:
                                 if reserva == 1:
                                     casal[1, "Disponível"] = 1, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Casal":"Quarto 1"]
+                                    cliente.reservas_cliente(tipo="Casal", número="Quarto 1")
                                 elif reserva == 2:
                                     simples [2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Casal":"Quarto 2"]
+                                    cliente.reservas_cliente(tipo="Casal", número="Quarto 2")
                             
                             case 3:
                                 duplo = {1 : "Disponivel", 2 : "Disponível"}
@@ -75,11 +75,11 @@ while True:
                                 if reserva == 1:
                                     duplo[1, "Disponível"] = 1, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Duplo":"Quarto 1"]
+                                    cliente.reservas_cliente(tipo="Duplo", número="Quarto 1")
                                 elif reserva == 2:
                                     duplo [2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Duplo":"Quarto 2"]
+                                    cliente.reservas_cliente(tipo="Duplo", número="Quarto 2")
 
                             case 4:
                                 duplo_casal = {1 : "Disponivel", 2 : "Disponível"}
@@ -88,24 +88,24 @@ while True:
                                 if reserva == 1:
                                     duplo_casal[1, "Disponível"] = 1, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Duplo Casal":"Quarto 1"]
+                                    cliente.reservas_cliente(tipo="Duplo Casal", número="Quarto 1")
                                 elif reserva == 2:
                                     duplo_casal[2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Duplo Casal":"Quarto 2"]
+                                    cliente.reservas_cliente(tipo="Duplo Casal", número="Quarto 2")
                             
                             case 5:
-                                luxo = {1 : "Disponivel", 2 : "Disponível"}
+                                luxo = {1:"Disponivel", 2:"Disponível"}
                                 print(f"Esses são os quartos para a categoria simples: {luxo}")
                                 reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
                                 if reserva == 1:
-                                    luxo[1, "Disponível"] = 1, "Indisponível"
+                                    luxo[1] = "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Luxo":"Quarto 1"]
+                                    cliente.reservas_cliente(tipo="Luxo", número="Quarto 1")
                                 elif reserva == 2:
-                                    luxo[2, "Disponível"] = 2, "Indisponível"
+                                    luxo[2] = "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Luxo":"Quarto 2"]
+                                    cliente.reservas_cliente(tipo="Luxo", número="Quarto 2")
                             
                             case 6:
                                 master = {1 : "Disponivel", 2 : "Disponível"}
@@ -114,14 +114,14 @@ while True:
                                 if reserva == 1:
                                     master[1, "Disponível"] = 1, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Master":"Quarto 1"]
+                                    cliente.reservas_cliente(tipo="Master", número="Quarto 1")
                                 elif reserva == 2:
                                     simples [2, "Disponível"] = 2, "Indisponível"
                                     print("Reserva realizada com sucesso!")
-                                    cliente.reservas_cliente["Master":"Quarto 2"]
+                                    cliente.reservas_cliente(tipo="Master", número="Quarto 2")
 
                             case 7:
-                                print(f"Você possuí {cliente.get_reserva()}")
+                                print(f"Você possuí estes quartos reservados: {cliente.get_tipo()}, sendo eles: {cliente.get_número()}")
                     else:
                         print("Login falhou, senha incorreta.")
 

@@ -32,15 +32,21 @@ class Cliente:
     def set_nome(self, nova_senha):
         self.nome = nova_senha
 
-    def get_reserva(self):
-        return self.reserva_cliente
+    def get_tipo(self):
+        return self.tipo
     
-    def set_reserva(self, nova_reserva):
-        self.reserva_cliente = nova_reserva
+    def get_número(self):
+        return self.número
+    
+    def set_reserva(self, novo_tipo):
+        self.tipo = novo_tipo
 
-    def reserva_cliente(self, reservas_cliente):
-        self.reserva_cliente = reservas_cliente
-        reservas_cliente = []
+    def set_reserva(self, novo_número):
+        self.número = novo_número
+
+    def reservas_cliente(self, tipo, número):
+        self.tipo = tipo
+        self.número = número
         
 class Quartos(Hotel):
     def características(self, camas, preço, espaço):
