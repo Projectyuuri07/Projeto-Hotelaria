@@ -61,7 +61,7 @@ class Luxo (Quartos):
         self.cama_luxo = 1
         self.preço = 450
         self.espaço = 1
-        banheira = 1
+        self.banheira = 1
 
 class Master (Quartos):
     def caracteristicas(self, cama_luxo_casal, preço, espaço, banheira, hidromassagem):

@@ -1,6 +1,9 @@
 from classe import*
 import os
+import time
 
+def espera():
+    time.sleep(2)
 
 clientes = []
 quartos = []
@@ -21,3 +24,11 @@ while True:
                     if cliente.validar_login(username, senha):
                         cliente_logado = cliente
                         break
+
+            case 2:
+                print("Quartos disponiveis")
+
+            case 3:
+                print("\nSaindo do sistema...")
+                espera()
+                break
