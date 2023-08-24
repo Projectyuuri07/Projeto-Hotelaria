@@ -48,13 +48,13 @@ def main():
                                         print("O quarto simples possui uma cama. com espaço para no máximo 1 pessoa.\n")
                                         print(f"Esses são os quartos para a categoria simples: {simples}")
                                         reserva = int(input("Qual deseja reservar? \nSua escolha: "))
-                                        if reserva == 1 and simples[1] == "Disponível":
+                                        if reserva == 1:
                                             simples[1] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Simples", número="Quarto 1")
                                             os.system("pause")
                                             os.system("cls")
-                                        elif reserva == 2 and simples[2] == "Disponível":
+                                        elif reserva == 2:
                                             simples [2] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Simples", número="Quarto 2")
@@ -71,13 +71,13 @@ def main():
                                         print("O quarto de casal possui uma cama de casal. com espaço para no máximo 2 pessoa.\n")
                                         print(f"Esses são os quartos para a categoria casal: {casal}")
                                         reserva = int(input("Qual deseja reservar? \nSua escolha: "))
-                                        if reserva == 1 and casal[1] == "Disponível":
+                                        if reserva == 1:
                                             casal[1] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Casal", número="Quarto 1")
                                             os.system("pause")
                                             os.system("cls")
-                                        elif reserva == 2 and casal[2] == "Disponível":
+                                        elif reserva == 2:
                                             simples [2] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Casal", número="Quarto 2")
@@ -93,13 +93,13 @@ def main():
                                         print("O quarto duplo possui duas camas de solteiro. Com espaço para no máximo 2 pessoa.\n")
                                         print(f"Esses são os quartos para a categoria duplo: {duplo}")
                                         reserva = int(input("Qual deseja reservar? \nSua escolha: "))
-                                        if reserva == 1 and duplo[1] == "Disponível":
+                                        if reserva == 1:
                                             duplo[1] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Duplo", número="Quarto 1")
                                             os.system("pause")
                                             os.system("cls")
-                                        elif reserva == 2 and duplo[2] == "Disponível":
+                                        elif reserva == 2:
                                             duplo [2] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Duplo", número="Quarto 2")
@@ -115,13 +115,13 @@ def main():
                                         print("O quarto duplo de casal possui duas camas de casal. Com espaço para no máximo 4 pessoa.\n")
                                         print(f"Esses são os quartos para a categoria duplo de casal: {duplo_casal}")
                                         reserva = int(input("Qual deseja reservar? \nSua escolha: "))
-                                        if reserva == 1 and duplo_casal[1] == "Disponível":
+                                        if reserva == 1:
                                             duplo_casal[1] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Duplo Casal", número="Quarto 1")
                                             os.system("pause")
                                             os.system("cls")
-                                        elif reserva == 2 and duplo_casal[2] == "Disponível":
+                                        elif reserva == 2:
                                             duplo_casal[2] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Duplo Casal", número="Quarto 2")
@@ -137,12 +137,12 @@ def main():
                                         print("O quarto de luxo possui uma cama de solteiro, infraestrutura superior e uma banheira.\n")
                                         print(f"Esses são os quartos para a categoria luxo: {luxo}")
                                         reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
-                                        if reserva == 1 and luxo[1] == "Disponível":
+                                        if reserva == 1:
                                             luxo[1] = "Indisponível"
                                             cliente.reservas_cliente(tipo="Luxo", número="Quarto 1")
                                             os.system("pause")
                                             os.system("cls")
-                                        elif reserva == 2 and luxo[2] == "Disponível":
+                                        elif reserva == 2:
                                             luxo[2] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Luxo", número="Quarto 2")
@@ -158,13 +158,13 @@ def main():
                                         print("O quarto master é a melhor experiência que podemos oferecer. Camas de casal premium, banheiras de hidromassagem e infraestrutura espetacular.\n")
                                         print(f"Esses são os quartos para a categoria master: {master}")
                                         reserva = int(input("Qual deseja reservar? \n Sua escolha: "))
-                                        if reserva == 1 and master[1] == "Disponível":
+                                        if reserva == 1:
                                             master[1] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Master", número="Quarto 1")
                                             os.system("pause")
                                             os.system("cls")
-                                        elif reserva == 2 and master[2] == "Disponível":
+                                        elif reserva == 2:
                                             simples [2] = "Indisponível"
                                             print("Reserva realizada com sucesso!")
                                             cliente.reservas_cliente(tipo="Master", número="Quarto 2")
