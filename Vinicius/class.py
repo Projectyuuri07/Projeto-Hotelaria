@@ -38,3 +38,32 @@ class Quartos(Hotel):
         self.preço = 100
         self.espaço = 1
 
+class Simples_Casal (Quartos):
+    def caracteristicas(self, camas, preço, espaço):
+        self.camas = 2
+        self.preço = 150
+        self.espaço = 2
+
+class Duplo (Quartos):
+    def caracteristicas(self, camas, preço, espaço):
+        self.camas = 2
+        self.preço = 300
+        self.espaço = 4
+
+class Duplo_Casal (Quartos):
+    def caracteristicas(self, camas, preço, espaço):
+        self.camas = 2
+        self.preço = 350
+        self.espaço = 6
+
+class Luxo (Quartos):
+    def caracteristicas(self, camas, preço, espaço):
+        self.camas = 2
+        self.preço = 450
+        self.espaço = 2
+
+class Master (Quartos):
+    def caracteristicas(self, camas, preço, espaço):
+        self.camas = 2
+        self.preço = 150
+        self.espaço = 2
