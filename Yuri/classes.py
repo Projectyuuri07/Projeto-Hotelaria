@@ -1,40 +1,40 @@
 class Hotel:
     def __init__(self, nome):
-        self.nome = nome
-        self.quartos = [AP_Luxo(i) for i in range(1, 3)] + [AP_Master(i) for i in range(3, 5)] + [AP_Simples(i) for i in range(5, 7)] + [AP_SimplesCasal(i) for i in range(7, 9)] + [AP_Duplo(i) for i in range(9, 11)] + [AP_DuploCasal(i) for i in range(11, 13)] 
-        self.reservas = []
+        self.__nome = nome
+        self.__quartos = [AP_Luxo(i) for i in range(1, 3)] + [AP_Master(i) for i in range(3, 5)] + [AP_Simples(i) for i in range(5, 7)] + [AP_SimplesCasal(i) for i in range(7, 9)] + [AP_Duplo(i) for i in range(9, 11)] + [AP_DuploCasal(i) for i in range(11, 13)] 
+        self.__reservas = []
     
     def listar_Quartos(self):
-        for quarto in self.quartos:
+        for quarto in self.__quartos:
             print(quarto)
 
     def listar_Reservas(self):
-        for reserva in self.reservas:
-            print(reserva)
+        for quarto in self.__quartos:
+            for reserva in quarto.reservas:
+                print(reserva)
     
 class Quartos:
     def __init__(self, numero, tipo, preco):
-        self.numero = numero
-        self.tipo = tipo
-        self.preco = preco
+        self.__numero = numero
+        self.__tipo = tipo
+        self.__preco = preco
         self.reservas = []
 
     def __str__(self):
-        return f'Número: {self.numero}\nTipo: {self.tipo}\nPreço: {self.preco}'
+        return f'Número: {self.__numero}\nTipo: {self.__tipo}\nPreço: {self.__preco}'
 
     def add_reserva(self, reserva):
-        self.reservas.append(reserva)    
-        hotel.reservas.append(reserva)
+        self.reservas.append(reserva)
 
 class Reserva:
     def __init__(self, nome, cpf, data_entrada, data_saida):
-        self.nome = nome
-        self.cpf = cpf
-        self.data_entrada = data_entrada
-        self.data_saida = data_saida
+        self.__nome = nome
+        self.__cpf = cpf
+        self.__data_entrada = data_entrada
+        self.__data_saida = data_saida
 
     def __str__(self):
-        return f'Nome: {self.nome}\nCPF: {self.cpf}\nData de entrada: {self.data_entrada}\nData de saída: {self.data_saida}'
+        return f'Nome: {self.__nome}\nCPF: {self.__cpf}\nData de entrada: {self.__data_entrada}\nData de saída: {self.__data_saida}'
 
 class AP_Luxo(Quartos):
     def __init__(self, numero):
@@ -67,5 +67,4 @@ Hotel.TIPOS_QUARTO = {
     'SimplesCasal': AP_SimplesCasal,
     'Duplo': AP_Duplo,
     'DuploCasal': AP_DuploCasal
-    }
-    
+}
