@@ -1,3 +1,5 @@
+#upload classes do vini, para adicionar ao meu algoritmo e começar a fase de testes.
+
 class Hotel:
     def __init__(self, quantidade_quartos, quartos_disponiveis, quartos_indisponiveis):
         self.quantidade_quartos = quantidade_quartos
