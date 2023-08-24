@@ -5,5 +5,6 @@ class Hotel:
     
     def reserva(self):
         quartos = []
+        quarto_reservado = int(input("Digite o quarto desejado: "))
         for i in quartos:
-            quartos.append
+            quartos.append(quarto_reservado)
