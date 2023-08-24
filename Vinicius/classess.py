@@ -38,11 +38,10 @@ class Cliente:
     def set_reserva(self, nova_reserva):
         self.reserva_cliente = nova_reserva
 
-    def reserva_cliente(self, reserva_cliente):
-        self.reserva_cliente = reserva_cliente
-        reserva_cliente = []
+    def reserva_cliente(self, reservas_cliente):
+        self.reserva_cliente = reservas_cliente
+        reservas_cliente = []
         
-
 class Quartos(Hotel):
     def características(self, camas, preço, espaço):
         self.camas = 1
