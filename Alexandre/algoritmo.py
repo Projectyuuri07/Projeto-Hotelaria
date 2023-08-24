@@ -5,7 +5,8 @@ import time
 def espera():
     time.sleep(2)
 
-hotel = Hotel(12,6,6)
+ibis = Hotel(12,6,6)
+clientes = []
 
 while True:
     x = 1
@@ -15,11 +16,12 @@ while True:
         match escolha:
             case 1:
                 os.system("cls")
-                cliente = Hotel()
-                cliente.cadastro(nome = input("Digite seu nome:"), senha = input("Digite sua senha"))
-                self.nome = input("Digite o nome de usuario:")
-                self.senha = input("Digite a senha:")
-
+                cliente = Cliente(nome=input("Digite seu nome: "), senha =("Digite sua seha: "))
+                print("Cadastrado com sucesso!")
+                print (f"{cliente.get_nome()}")
+                print (f"{cliente.get_senha()}")
+                for cliente in clientes:
+                    cliente.append(clientes)
 
             case 2:
                 os.system("cls")
@@ -31,9 +33,6 @@ while True:
                     if cliente.validar_login(username, senha):
                         cliente_logado = cliente
                         break
-
-            case 3:
-                
                 
             case 4:
                 os.system("cls")
