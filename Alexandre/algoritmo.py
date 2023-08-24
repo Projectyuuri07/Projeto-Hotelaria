@@ -27,8 +27,7 @@ while True:
             case 2:
                 os.system("cls")
                 for i in clientes:
-                    print(cliente)
-                    os.system("pause")
+                    print(i.get_nome())
                 nome_login = input("Qual o seu nome: ")
                 if nome_login in clientes:
                     senha_login = int(input("Digite sua senha: "))
