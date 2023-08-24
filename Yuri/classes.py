@@ -21,5 +21,21 @@ class Hotel:
         self.reservas.append(reserva)
     
     
+class Quartos:
+    def __init__(self, numero, tipo, preco):
+        self.numero = numero
+        self.tipo = tipo
+        self.preco = preco
+        self.reservas = []
+
+class Reserva:
+    def __init__(self, nome, cpf, data_entrada, data_saida):
+        self.nome = nome
+        self.cpf = cpf
+        self.data_entrada = data_entrada
+        self.data_saida = data_saida
+
+    def __str__(self):
+        return input(f'Nome: {self.nome}\nCPF: {self.cpf}\nData de entrada: {self.data_entrada}\nData de saída: {self.data_saida}')    
 
 
